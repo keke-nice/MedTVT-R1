@@ -47,7 +47,7 @@ elif llama_type == '7B':
     llama_tokenzier_path = args.llama_dir
 
 if args.model_type == 'cardio_llama':
-    model = Cardio_LLaMA(llama_ckpt_dir, llama_tokenzier_path, args, knn=False, stage=3, load_llama=False)
+    model = Cardio_LLaMA(llama_ckpt_dir, llama_tokenzier_path, args, stage=3, load_llama=False)
 
 print("Loading Model Checkpoint")
 checkpoint = torch.load(args.model, map_location='cpu')
