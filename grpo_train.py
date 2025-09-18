@@ -292,7 +292,7 @@ def main(training_args):
         training_args.llama_ckpt_dir = os.path.join(training_args.llama_path)
         training_args.llama_tokenzier_path = os.path.join(training_args.llama_path,'tokenizer.model')
         
-    model = Cardio_LLaMA(training_args.llama_ckpt_dir, training_args.llama_tokenzier_path, training_args, knn=False, stage=3, load_llama=False)
+    model = Cardio_LLaMA(training_args.llama_ckpt_dir, training_args.llama_tokenzier_path, training_args, stage=3, load_llama=False)
     print(model)
     print("Loading Model Checkpoint")
     checkpoint = torch.load(training_args.model_ckpt, map_location='cpu')
